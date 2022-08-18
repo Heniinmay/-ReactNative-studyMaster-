@@ -1,10 +1,13 @@
 import react from "react";
-import { View, Text } from "react-native";
+import { TouchableOpacity, Text } from "react-native";
 
-const Movie = () => (
-  <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+const Movie = ({ navigation: { navigate, goBack } }) => (
+  <TouchableOpacity
+    onPress={() => navigate("Stack", { screen: "Three" })} // 옮기고자 하는 navi를 적고 이동할 스크린을 적는다 (네비게이션 > scsreen )
+    style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
+  >
     <Text>Movie</Text>
-  </View>
+  </TouchableOpacity>
 );
 
 export default Movie;

@@ -7,6 +7,7 @@ import {
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import React, { useState } from "react";
+import RootNav from "./navigation/Root";
 import Stack from "./navigation/Stack";
 import Tabs from "./navigation/Tabs";
 
@@ -39,7 +40,7 @@ export default function App() {
   return (
     <NavigationContainer>
       {/* <Tabs /> */}
-      <Stack />
+      <RootNav />
     </NavigationContainer>
   );
 }

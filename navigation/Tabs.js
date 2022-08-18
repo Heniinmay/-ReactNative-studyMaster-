@@ -5,6 +5,7 @@ import Movie from "../screens/Movie";
 import Search from "../screens/Search";
 import Tv from "../screens/Tv";
 import { Ionicons } from "@expo/vector-icons";
+import Stack from "./Stack";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,13 +36,9 @@ const Tabs = () => {
         name="Movie"
         component={Movie}
         options={{
+          // headerShown: false, // 중첩 헤더 제거
           tabBarIcon: ({ color, size }) => (
             <Ionicons name={"film-outline"} color={color} size={size} />
-          ),
-          headerRight: () => (
-            <View>
-              <Text>M</Text>
-            </View>
           ),
         }}
       />
